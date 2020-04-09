@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="/assets/stylesheets/styles.css" rel="stylesheet" type="text/css">
+        <title>Submission doc</title>
+    </head>
+        <body>
+            <%if (send==1) { %>
+            <h1>Welcome to the course <%= course %></h1>
+            <table style="width:100%" border="1">
+                <tr>
+                  <th>Course ID:</th>
+                  <td><%= data.courseid %></td>
+                </tr>
+                <tr>
+                    <th>Course Title:</th>
+                    <td><%= data.title %></td>
+                  </tr>
+                  <tr>
+                    <th>Course Term:</th>
+                    <td><%= data.term %></td>
+                  </tr>
+                  <tr>
+                    <th>Course Instructor:</th>
+                    <td><%= data.instructor %></td>
+                  </tr>
+                  <tr>
+                      <th><%- include('image') %></th>
+                </tr>
+              </table>
+            
+            <% }else { %>
+                <table style="width:100%" border="1">
+                    <tr>
+                      <th>NO DATA AVAILABLE ON THIS COURSE</th>
+                    </tr>
+                  </table>
+            <% } %>
+        </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Submission doc</title>
+        <style>
+            body{background:skyblue; font-family: Verdana, Geneva, Tahoma, sans-serif; color: #fff; padding: 30px;}
+            h1{font-size: 48px;text-transform: uppercase;letter-spacing: 2px;text-align: center;}
+            p{font-size: 16px;text-align: center;}
+        </style>
+    </head>
+        <body>
+            <%- include('partials/nav') %>
+            <h1>COURSE DETAILS INPUT</h1>
+	    <h1><%- num %> form submissions</h1>
+            <form id="contact-form" class='form-inline' method="POST" action="/courseDetails">
+                <label for="courseid">Course ID</label>
+                <input type="text" name="courseid">
+                <label for="title">Title</label>
+                <input type="text" name="title" >
+                <label for="term">Term</label>
+                <input type="text" name="term" >
+                <label for="instructor">Instructor</label>
+                <input type="text" name="Instructor" >
+                <input type="submit" value="submit">
+                
+            </form>
+        </body>
+</html>
